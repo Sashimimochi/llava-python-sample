@@ -5,7 +5,7 @@ Vision and Language Model（画像と自然言語を組み合わせたモデル�
 ## Quick Start
 
 ```bash
-$ ./setup.sh
+$ make setup
 $ docker-compose up -d
 ```
 
