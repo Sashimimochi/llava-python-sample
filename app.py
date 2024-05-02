@@ -10,10 +10,12 @@ st.title("LLaVA Demo")
 def load_model():
     chat_handler = Llava15ChatHandler(clip_model_path="model/mmproj-model-f16.gguf")
     llm = Llama(
-    model_path="model/ggml-model-q4_k.gguf",
-    chat_handler=chat_handler,
-    n_ctx=2048, # n_ctx should be increased to accomodate the image embedding
-    logits_all=True,# needed to make llava work
+        model_path="model/ggml-model-q4_k.gguf",
+        chat_handler=chat_handler,
+        n_ctx=2048, # n_ctx should be increased to accomodate the image embedding
+        logits_all=True,# needed to make llava work
+        temperature=0.5,
+        repeat_penalty=1.1
     )
     return llm
 
