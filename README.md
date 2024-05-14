@@ -4,8 +4,15 @@ Vision and Language Model（画像と自然言語を組み合わせたモデル�
 
 ## Quick Start
 
+初回実行時
+
 ```bash
 $ make setup
+```
+
+2 回目以降
+
+```bash
 $ docker-compose up -d
 ```
 
@@ -27,4 +34,6 @@ open http://localhost:8501
 https://github.com/abetlen/llama-cpp-python?tab=readme-ov-file#multi-modal-models
 にあるようにいくつかのモデルから好みのものを選択して使うことができる。
 
-`setup.sh` や `app.py` を適宜書き換えれば別のモデルで試すこともできる。
+ページ上部のモデル一覧から使用したいモデルを選択して実行することができる。
+
+※13B 以上のモデルは GPU 利用を推奨
