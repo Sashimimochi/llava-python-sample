@@ -88,8 +88,7 @@ def load_model_from_local(model_name):
     text_model = model_info["text-model"]
     if model_name == "moondream2":
         chat_handler = MoondreamChatHandler(
-            repo_id=mmproj["repo_id"],
-            filename=mmproj["filename"]
+            clip_model_path=os.path.join(MODEL_DIR, mmproj["filename"])
         )
     else:
         chat_handler = Llava15ChatHandler(clip_model_path=os.path.join(MODEL_DIR, mmproj["filename"]))
